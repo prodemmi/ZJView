@@ -21,6 +21,6 @@
 
 ### Links
 
-- [License](./LICENSE)
-- [Contribute](./CONTRIBUTE)
+- [License](./LICENSE.md)
+- [Contribute](./CONTRIBUTE.md)
 - [View on npm](https://www.npmjs.com/package/zjview)
