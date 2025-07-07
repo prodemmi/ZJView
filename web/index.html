@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZJView | Web Big JSON Processor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="header-content">
+          <div class="logo">
+            <a href="https://github.com/prodemmi/zjview" target="_blank">
+              <img src="zjview-logo.png" width="90" />
+            </a>
+            <div class="header-text">
+              <h1>ZJVIEW - Web Big JSON Processor</h1>
+              <p>
+                Source:
+                <a href="https://github.com/prodemmi/zjview" target="_blank"
+                  >github</a
+                >
+              </p>
+              <p>
+                NPM:
+                <a href="https://www.npmjs.com/package/zjview" target="_blank"
+                  >npm</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="theme-toggle">
+            <button
+              class="theme-btn"
+              id="themeToggle"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="sun-icon"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="12"
+                  y1="1"
+                  x2="12"
+                  y2="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="12"
+                  y1="21"
+                  x2="12"
+                  y2="23"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="4.22"
+                  y1="4.22"
+                  x2="5.64"
+                  y2="5.64"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="18.36"
+                  y1="18.36"
+                  x2="19.78"
+                  y2="19.78"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="1"
+                  y1="12"
+                  x2="3"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="21"
+                  y1="12"
+                  x2="23"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="4.22"
+                  y1="19.78"
+                  x2="5.64"
+                  y2="18.36"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="18.36"
+                  y1="5.64"
+                  x2="19.78"
+                  y2="4.22"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+              <svg
+                class="moon-icon"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="row">
+          <section class="description-section">
+            <div class="description-card">
+              <h2>About ZJView</h2>
+              <p>
+                ZJView helps you analyze and extract insights from large JSON
+                files directly in your browser. Upload your file to view
+                statistics, search for key values, and extract all keys without
+                sending your data to any server.
+              </p>
+              <ul class="description-list">
+                <li><b>Zig + WASM</b> Technologies</li>
+                <li>Supports files up to <b>500MB</b></li>
+                <li>
+                  Displays file size, total keys, objects, arrays, and max depth
+                </li>
+                <li>Search for specific key values</li>
+                <li>Extract and view all keys</li>
+                <li>Works entirely offline for your privacy</li>
+              </ul>
+            </div>
+          </section>
+          <div class="upload-section">
+            <div class="upload-card">
+              <div class="upload-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <polyline
+                    points="7,10 12,15 17,10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <line
+                    x1="12"
+                    y1="15"
+                    x2="12"
+                    y2="3"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2>Upload JSON File</h2>
+              <p>Drag and drop your JSON file here, or click to browse</p>
+              <input
+                type="file"
+                id="fileInput"
+                accept=".json,.txt"
+                class="file-input"
+              />
+              <label for="fileInput" class="upload-btn">Choose File</label>
+              <div class="file-info" id="fileInfo" style="display: none">
+                <span class="file-name" id="fileName"></span>
+                <span class="file-size" id="fileSizeDisplay"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="status" id="status"></div>
+
+        <div class="results" id="results" style="display: none">
+          <div class="stats-grid" id="stats">
+            <div class="stat-card">
+              <div class="stat-icon">📊</div>
+              <div class="stat-content">
+                <div class="stat-value" id="fileSize">0</div>
+                <div class="stat-label">File Size</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🔑</div>
+              <div class="stat-content">
+                <div class="stat-value" id="totalKeys">0</div>
+                <div class="stat-label">Total Keys</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">📦</div>
+              <div class="stat-content">
+                <div class="stat-value" id="totalObjects">0</div>
+                <div class="stat-label">Objects</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">📋</div>
+              <div class="stat-content">
+                <div class="stat-value" id="totalArrays">0</div>
+                <div class="stat-label">Arrays</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🏗️</div>
+              <div class="stat-content">
+                <div class="stat-value" id="maxDepth">0</div>
+                <div class="stat-label">Max Depth</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tools-section">
+            <div class="tool-card">
+              <div class="tool-header">
+                <h3>🔍 Search Key Value</h3>
+              </div>
+              <div class="search-container">
+                <input
+                  type="text"
+                  id="keySearch"
+                  placeholder="Enter key name to search..."
+                  class="search-input"
+                />
+                <button id="searchButton" class="search-btn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="11"
+                      cy="11"
+                      r="8"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="m21 21-4.35-4.35"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  Search
+                </button>
+              </div>
+              <div id="keyValue" class="search-result"></div>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-header">
+                <h3>📋 All Keys</h3>
+                <button id="extractKeysButton" class="extract-btn">
+                  Extract Keys
+                </button>
+              </div>
+              <div id="keysList" class="keys-container"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
