@@ -95,7 +95,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   color: white;
 }
 
@@ -140,9 +140,11 @@ body {
   display: block;
 }
 
-.row {
+.banner-row {
   display: flex;
+  margin: 1rem;
   gap: 1rem;
+  height: 80dvh;
 }
 
 /* Main Content */
@@ -168,7 +170,7 @@ body {
   padding: 3rem 2rem;
   transition: all 0.3s ease;
   overflow: hidden;
-  height: 62dvh;
+  height: 64dvh;
 }
 
 .description-list {
@@ -190,7 +192,7 @@ body {
   text-align: center;
   transition: all 0.3s ease;
   overflow: hidden;
-  height: 62dvh;
+  height: 64dvh;
 }
 
 .upload-card::before {
@@ -581,6 +583,18 @@ body {
     gap: 0.5rem;
     text-align: center;
   }
+
+  .banner-row {
+    height: max-content;
+  }
+
+  .description-card {
+    height: max-content;
+  }
+.upload-card {
+  height: max-content;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -594,6 +608,11 @@ body {
 
   .stat-value {
     font-size: 1.5rem;
+  }
+
+  .banner-row {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
