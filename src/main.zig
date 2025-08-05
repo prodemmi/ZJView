@@ -1,7 +1,7 @@
 const std = @import("std");
 
 // Large buffer for processing big JSON files
-var json_buffer: [1000 * 1024 * 1024]u8 = undefined; // 10MB buffer
+var json_buffer: [1000 * 1024 * 1024]u8 = undefined; // 1GB buffer
 var json_length: usize = 0;
 
 // Result buffer for keys/values
